@@ -1,0 +1,18 @@
+package com.univlittoral.projetback.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.univlittoral.projetback.entity.LivreEntity;
+
+	@Repository
+	public interface LivreRepository extends JpaRepository<LivreEntity, Long>{
+			
+		@Query(value = "SELECT * FROM livres WHERE genre like :genre", nativeQuery = true)
+		public List<LivreEntity> findLivreByGenre(@Param("genre") String genre);
+		
+	}

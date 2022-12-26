@@ -1,0 +1,46 @@
+LivreDTO {
+VOIR LIVREDETAIL
+
+	str edteur;
+	str lieuParution;
+	str Genre;
+	str auteurPrenom;
+	str auteurNom;
+	int nbPages;
+	date DateParution;
+}
+
+ListeDTO{
+	
+}
+
+GraphDTO{
+
+}
+
+IndicateurDTO{
+	int nbLivres;
+	int nbAuteurs;
+	int nbGenres;
+}
+
+HomeDTO{
+	private List <LivreDTO> livres;
+	private IndicateurDTO indicateur;
+	private GraphDTO graph;
+	str auteur;
+	str auteur;
+	str genre;
+
+}
+
+AuteurDTO{
+	str prenom;
+	str nom;
+	date dateNaissance;	
+	list<LivreDTO> livres;
+}
+
+Entité auteur et livres
+
+puis mapping
